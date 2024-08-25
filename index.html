@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive News Website</title>
+    
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Date and Time</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    #datetime {
+        font-size: 24px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div id="datetime">Loading date and time...</div>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        const options = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false,
+            timeZoneName: 'short'
+        };
+        const formattedDate = now.toLocaleString('en-US', options);
+        document.getElementById('datetime').textContent = formattedDate;
+    }
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+
+    // Initial call to display date and time immediately
+    updateDateTime();
+</script>
+<body>
+    <header>
+        <h1>News Today</h1>
+        <nav id="navbar">
+            <ul>
+                <a href="http://127.0.0.1:5500/index.html"><button>home</button></a>
+                <a href="https://www.bing.com/news/search?q=world+news&FORM=HDRSC7"><button>World</button></a>
+                <li><a href="https://www.bing.com/news/search?q=politics+news&FORM=HDRSC7"><button>Politics</button></a></li>
+                <li><a href="https://www.bing.com/news/search?q=technology+news&qs=MQT&form=QBNT&sp=1&lq=0&pq=te+news&sc=10-7&cvid=1CF7FAAAF39C4461BAA070D626EB0B31"><button>Technology</button></a></li>
+                <li><a href="https://www.bing.com/search?q=spots+news&cvid=35f89829faa34ca6acb4d175c4a49532&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQg0MjQyajBqNKgCCLACAQ&FORM=ANAB01&PC=U531"><button>Sports</button></a></li>
+                <li><a href="https://www.bing.com/news/search?q=entertainment+news&qs=n&form=QBNT&sp=-1&lq=0&pq=entertainment+news&sc=10-18&sk=&cvid=6BFEC27C33044592A5ED01001E3F9F0B&ghsh=0&ghacc=0&ghpl="><button>Entertainment</button></a></li>
+            </ul>
+        </nav>
+        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    </header>
+   
+    <main>
+        <article class="news-article">
+            <h2>Implement school safety guidelines, Centre tells States</h2>
+            <p>The guidelines have been issued by the Union Education Ministry and contain provisions to fix accountability on school managements
+                In view of protests over the alleged sexual assault of two four-year-old girls at a school in Badlapur near Mumbai last week, the Union Education Ministry has directed all States and Union Territories to implement its guidelines to ensure safety and security of children in schools.  
+
+The Ministry has also asked States and UTs to inform the status of notification of the guidelines that it had issued in 2021 in accordance with the Protection of Children against Sexual Offences (Pocso) Act. 
+
+
+            </p>
+            <img src="images/download (1).jpg">
+        </article>
+        <article class="news-article">
+            <h2>‘Space sector contributed ₹20,000 crore to India’s GDP over the last decade’</h2>
+            <p>The Space Day celebrations are to commemorate the first anniversary of the successful landing of the Chandrayaan-3 on August 23 last year.
+                India’s space sector has directly contributed about $24 billion (₹20,000 crore) to India’s Gross Domestic Product over the last decade. It has directly supported 96,000 jobs in the public and private sector. For every dollar produced by the space sector, there was a multiplier effect of $2.54 to the Indian economy and India’s space force was 2.5 times “more productive” than the country’s broader industrial workforce.
+            </p>
+            <img src="images/2.jpg">
+        </article>
+        <article class="news-article">
+            <h2>‘BHISHM Cubes’ aka portable hospital: India’s gift to Ukraine</h2>
+            <p>The presentation of the BHISHM cubes has been one of the key highlights of the ongoing visit of Prime Minister Narendra Modi to war-affected Ukraine
+                External Affairs Minister Dr. S. Jaishankar on Friday (August 23, 2024) said that India has handed over 10 BHISHM cubes, which contain medical support equipment of 22 tonnes along with 10 generator sets.
+            </p>
+            <img src="images/3.jpg">
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 News Today. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
